@@ -4,7 +4,7 @@ namespace Goodreads.Tests.Unit
 {
     public class UnitTest1
     {
-        [Fact]
+        [Fact(Skip = "Mongo dependencies should be removed.")]
         public void Test1()
         {
             var feedParser = new FeedParser();
@@ -15,7 +15,7 @@ namespace Goodreads.Tests.Unit
             mongoPersister.SaveUserStatuses(userStatuses);
         }
 
-        [Fact]
+        [Fact(Skip = "Mongo dependencies should be removed.")]
         public void ListDbsTest()
         { 
             var mongoPersister = new MongoPersister("", "");

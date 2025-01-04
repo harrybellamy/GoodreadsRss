@@ -3,12 +3,12 @@ using MongoDB.Driver;
 
 namespace GoodreadsRss;
 
-public class MongoPersister
+public class MongoPersister(string connectionString, string databaseName)
 {
-    private readonly string connectionString;
-    private readonly string databaseName;
+    private readonly string connectionString = connectionString;
+    private readonly string databaseName = databaseName;
 
-    public MongoPersister(string connectionString, string databaseName)
+    static MongoPersister()
     {
         BsonClassMap.RegisterClassMap<UserStatusItem>(classMap =>
         {
@@ -20,9 +20,6 @@ public class MongoPersister
             classMap.MapProperty(c => c.Id);
             classMap.MapProperty(c => c.PublishDate);
         });
-
-        this.connectionString = connectionString;
-        this.databaseName = databaseName;
     }
 
     public void ListDbs()
