@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodreadsRss", "GoodreadsRss\GoodreadsRss.csproj", "{71E660F8-0768-4591-897A-0F69DC3D13AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goodreads.Tests.Unit", "Goodreads.Tests.Unit\Goodreads.Tests.Unit.csproj", "{295EB3EB-BC14-4F1F-AA51-5E64DEB0B5F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71E660F8-0768-4591-897A-0F69DC3D13AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71E660F8-0768-4591-897A-0F69DC3D13AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71E660F8-0768-4591-897A-0F69DC3D13AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71E660F8-0768-4591-897A-0F69DC3D13AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{295EB3EB-BC14-4F1F-AA51-5E64DEB0B5F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{295EB3EB-BC14-4F1F-AA51-5E64DEB0B5F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{295EB3EB-BC14-4F1F-AA51-5E64DEB0B5F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{295EB3EB-BC14-4F1F-AA51-5E64DEB0B5F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9AB2544B-A43E-4AE0-9368-8E8EBE24BD8C}
+	EndGlobalSection
+EndGlobal
