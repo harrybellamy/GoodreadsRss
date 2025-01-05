@@ -5,14 +5,19 @@ namespace GoodreadsRss;
 public abstract class Item
 {
     protected static (string bookTitle, string bookAuthor) GetBookTitleAndAuthor(
-        SyndicationItem syndicationItem)
+        SyndicationItem syndicationItem
+    )
     {
         const string altTagStartStr = @"alt=""";
         var altTagStart = syndicationItem.Summary.Text.IndexOf(altTagStartStr);
-        var altTagEnd = syndicationItem.Summary.Text.IndexOf('"', altTagStart + altTagStartStr.Length);
+        var altTagEnd = syndicationItem.Summary.Text.IndexOf(
+            '"',
+            altTagStart + altTagStartStr.Length
+        );
 
         var bookTitleAndAuthor = syndicationItem.Summary.Text[
-            (altTagStart + altTagStartStr.Length)..altTagEnd];
+            (altTagStart + altTagStartStr.Length)..altTagEnd
+        ];
 
         var split = bookTitleAndAuthor.Split(" by ");
         return (split[0], split[1]);
@@ -23,7 +28,8 @@ public abstract class Item
         var firstIndex = syndicationItem.Summary.Text.IndexOf('"');
         var secondIndex = syndicationItem.Summary.Text.IndexOf('"', firstIndex + 1);
 
-
-        return syndicationItem.Summary.Text[(firstIndex + 1)..secondIndex].Replace("/book/show/", "");
+        return syndicationItem
+            .Summary.Text[(firstIndex + 1)..secondIndex]
+            .Replace("/book/show/", "");
     }
 }

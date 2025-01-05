@@ -8,7 +8,8 @@ public class ReviewItem(
     string bookId,
     DateTimeOffset publishDate,
     string id,
-    int rating) : Item
+    int rating
+) : Item
 {
     public string BookTitle { get; } = bookTitle;
 
@@ -18,8 +19,8 @@ public class ReviewItem(
     public string Id { get; } = id;
     public int Rating { get; } = rating;
 
-    public static bool IsReviewItem(SyndicationItem syndicationItem)
-        => syndicationItem.Id.StartsWith("Review");
+    public static bool IsReviewItem(SyndicationItem syndicationItem) =>
+        syndicationItem.Id.StartsWith("Review");
 
     public static ReviewItem Create(SyndicationItem syndicationItem)
     {
@@ -32,7 +33,8 @@ public class ReviewItem(
             bookId,
             syndicationItem.PublishDate,
             syndicationItem.Id,
-            rating);
+            rating
+        );
     }
 
     private static int GetRating(SyndicationItem syndicationItem)

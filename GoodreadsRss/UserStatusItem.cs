@@ -10,7 +10,8 @@ public class UserStatusItem : Item
         string bookAuthor,
         string bookId,
         DateTimeOffset publishDate,
-        string id)
+        string id
+    )
     {
         DonePercentage = donePercentage;
         BookTitle = bookTitle;
@@ -27,7 +28,8 @@ public class UserStatusItem : Item
     public DateTimeOffset PublishDate { get; }
     public string Id { get; }
 
-    public static bool IsUserStatusItem(SyndicationItem syndicationItem) => syndicationItem.Id.StartsWith("UserStatus");
+    public static bool IsUserStatusItem(SyndicationItem syndicationItem) =>
+        syndicationItem.Id.StartsWith("UserStatus");
 
     public static UserStatusItem Create(SyndicationItem syndicationItem)
     {
@@ -35,12 +37,13 @@ public class UserStatusItem : Item
         var (bookTitle, bookAuthor) = GetBookTitleAndAuthor(syndicationItem);
         var bookId = GetBookId(syndicationItem);
         return new UserStatusItem(
-            donePercentage, 
-            bookTitle, 
-            bookAuthor, 
-            bookId, 
-            syndicationItem.PublishDate, 
-            syndicationItem.Id);
+            donePercentage,
+            bookTitle,
+            bookAuthor,
+            bookId,
+            syndicationItem.PublishDate,
+            syndicationItem.Id
+        );
     }
 
     private static int GetDonePercentage(SyndicationItem syndicationItem)

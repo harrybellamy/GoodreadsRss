@@ -1,5 +1,5 @@
-﻿using GoodreadsRss;
-using System.ServiceModel.Syndication;
+﻿using System.ServiceModel.Syndication;
+using GoodreadsRss;
 
 namespace Goodreads.Tests.Unit;
 
@@ -20,10 +20,7 @@ public class UserStatusItemTests
     [InlineData("ReadStatusId", false)]
     public void IsUserStatusTest(string id, bool expectedResult)
     {
-        var syndicationItem = new SyndicationItem
-        {
-            Id = id
-        };
+        var syndicationItem = new SyndicationItem { Id = id };
 
         var result = UserStatusItem.IsUserStatusItem(syndicationItem);
 
@@ -38,12 +35,20 @@ public class UserStatusItemTests
             Id = "ReadStatusId",
             Summary = new TextSyndicationContent(summaryText),
             PublishDate = new DateTime(2024, 09, 01, 14, 50, 26, DateTimeKind.Utc),
-            Title = new TextSyndicationContent(titleText),   
+            Title = new TextSyndicationContent(titleText),
         };
 
         var result = UserStatusItem.Create(syndicationItem);
 
-        DateTimeOffset expectedPublishDate = new DateTime(2024, 09, 01, 14, 50, 26, DateTimeKind.Utc);
+        DateTimeOffset expectedPublishDate = new DateTime(
+            2024,
+            09,
+            01,
+            14,
+            50,
+            26,
+            DateTimeKind.Utc
+        );
         var expected = new
         {
             BookTitle = "The Kaiju Preservation Society",
@@ -51,7 +56,7 @@ public class UserStatusItemTests
             PublishDate = expectedPublishDate,
             BookId = "57693406-the-kaiju-preservation-society",
             Id = "ReadStatusId",
-            DonePercentage = 51
+            DonePercentage = 51,
         };
 
         Assert.Equivalent(expected, result);
