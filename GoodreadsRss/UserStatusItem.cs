@@ -25,22 +25,27 @@ public class UserStatusItem : Item
     }
 
     public int DonePercentage { get; }
+
     /// <summary>
     /// The title of the book.
     /// </summary>
     public string BookTitle { get; }
+
     /// <summary>
     /// The author of the book.
     /// </summary>
     public string BookAuthor { get; }
+
     /// <summary>
     /// The id of the book.
     /// </summary>
     public string BookId { get; }
+
     /// <summary>
     /// The date this item was published.
     /// </summary>
     public DateTimeOffset PublishDate { get; }
+
     /// <summary>
     /// The unique id of this item.
     /// </summary>

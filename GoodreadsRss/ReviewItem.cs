@@ -24,22 +24,27 @@ public class ReviewItem(
     /// The book title.
     /// </summary>
     public string BookTitle { get; } = bookTitle;
+
     /// <summary>
     /// The book author.
     /// </summary>
     public string BookAuthor { get; } = bookAuthor;
+
     /// <summary>
     /// The book id.,
     /// </summary>
     public string BookId { get; } = bookId;
+
     /// <summary>
     /// The publish date of the item.
     /// </summary>
     public DateTimeOffset PublishDate { get; } = publishDate;
+
     /// <summary>
     /// THe unique identifier for this update.
     /// </summary>
     public string Id { get; } = id;
+
     /// <summary>
     /// The rating for the book given in the review.
     /// </summary>

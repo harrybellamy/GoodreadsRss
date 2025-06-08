@@ -9,16 +9,19 @@ namespace GoodreadsRss;
 public class FeedResult(IEnumerable<SyndicationItem> items)
 {
     private IEnumerable<SyndicationItem> Items { get; } = items;
+
     /// <summary>
     /// Gets the <see cref="UserStatusItem"/>s present in the feed.
     /// </summary>
     public IEnumerable<UserStatusItem> UserStatuses =>
         Items.Where(w => UserStatusItem.IsUserStatusItem(w)).Select(s => UserStatusItem.Create(s));
+
     /// <summary>
     /// Gets the <see cref="ReadStatusItem"/>s present in the feed.
     /// </summary>
     public IEnumerable<ReadStatusItem> ReadStatuses =>
         Items.Where(w => ReadStatusItem.IsReadStatusItem(w)).Select(s => ReadStatusItem.Create(s));
+
     /// <summary>
     /// Gets the <see cref="ReviewItem"/>s present in the feed.
     /// </summary>

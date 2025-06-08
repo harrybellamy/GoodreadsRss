@@ -24,14 +24,17 @@ public class ReadStatusItem : Item
     /// The title of the book.
     /// </summary>
     public string BookTitle { get; }
+
     /// <summary>
     /// The author of the book.
     /// </summary>
     public string BookAuthor { get; }
+
     /// <summary>
     /// The publish date of this update.
     /// </summary>
     public DateTimeOffset PublishDate { get; }
+
     /// <summary>
     /// The unique identifier of this item.
     /// </summary>
