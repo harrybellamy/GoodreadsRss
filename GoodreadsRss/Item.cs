@@ -2,6 +2,9 @@
 
 namespace GoodreadsRss;
 
+/// <summary>
+/// Abstract base class for all items received from the GoodReads feed.
+/// </summary>
 public abstract class Item
 {
     protected static (string bookTitle, string bookAuthor) GetBookTitleAndAuthor(
