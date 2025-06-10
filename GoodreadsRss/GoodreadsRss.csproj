@@ -6,11 +6,18 @@
     <Nullable>enable</Nullable>
     <LangVersion>preview</LangVersion>
     <PackageId>GoodreadsRss</PackageId>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <Authors>Harry Bellamy</Authors>
     <Description>A lightweight library for accessing and parsing data from the GoodReads RSS feed.</Description>
     <RepositoryUrl>https://github.com/harrybellamy/GoodreadsRss</RepositoryUrl>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(OutputPath)$(AssemblyName).xml" pack="true" packagePath="lib\netstandard2.1" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.ServiceModel.Syndication" Version="9.0.5" />

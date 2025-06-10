@@ -24,6 +24,9 @@ public class UserStatusItem : Item
         Id = id;
     }
 
+    /// <summary>
+    /// The done percentage of the book in this update.
+    /// </summary>
     public int DonePercentage { get; }
 
     /// <summary>
