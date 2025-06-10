@@ -1,0 +1,1 @@
+dotnet pack GoodreadsRss/GoodreadsRss.csproj -o ./nupkgs

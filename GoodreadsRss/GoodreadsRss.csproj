@@ -1,13 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
+    <PackageId>GoodreadsRss</PackageId>
+    <Version>0.0.1</Version>
+    <Authors>Harry Bellamy</Authors>
+    <Description>A lightweight library for accessing and parsing data from the GoodReads RSS feed.</Description>
+    <RepositoryUrl>https://github.com/harrybellamy/GoodreadsRss</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.ServiceModel.Syndication" Version="8.0.0" />
+    <PackageReference Include="System.ServiceModel.Syndication" Version="9.0.5" />
   </ItemGroup>
 
 </Project>
