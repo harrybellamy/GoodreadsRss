@@ -3,6 +3,9 @@
 using System.ServiceModel.Syndication;
 using System.Xml;
 
+/// <summary>
+/// Class that does the feed parsing to produce a <see cref="FeedResult"/>
+/// </summary>
 public class FeedParser : IFeedParser
 {
     /// <summary>

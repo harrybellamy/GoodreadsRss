@@ -7,7 +7,12 @@ namespace GoodreadsRss;
 /// </summary>
 public abstract class Item
 {
-    protected static (string bookTitle, string bookAuthor) GetBookTitleAndAuthor(
+    /// <summary>
+    /// Gets the book's title and author from the supplied <see cref="SyndicationItem"/>.
+    /// </summary>
+    /// <param name="syndicationItem">The syndication item.</param>
+    /// <returns>The book's title and author.</returns>
+    protected internal static (string bookTitle, string bookAuthor) GetBookTitleAndAuthor(
         SyndicationItem syndicationItem
     )
     {
@@ -26,7 +31,12 @@ public abstract class Item
         return (split[0], split[1]);
     }
 
-    protected static string GetBookId(SyndicationItem syndicationItem)
+    /// <summary>
+    /// Gets the book's id from the supplied <see cref="SyndicationItem"/>.
+    /// </summary>
+    /// <param name="syndicationItem">The syndication item.</param>
+    /// <returns>The book's id.</returns>
+    protected internal static string GetBookId(SyndicationItem syndicationItem)
     {
         var firstIndex = syndicationItem.Summary.Text.IndexOf('"');
         var secondIndex = syndicationItem.Summary.Text.IndexOf('"', firstIndex + 1);
